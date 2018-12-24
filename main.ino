@@ -47,14 +47,16 @@ void setup(void)
 void loop() {
     myOLED.clrScr();
     myOLED.printNumI(speed_bike, 16, 26, 0, '1');
-    myOLED.printNumF((float)range_bike/1000,  2, 64, 26);
+    myOLED.printNumF((float)range_bike/1000,  2, 60, 26);
 
     if(speed_bike>9){
-      myOLED.drawRect(8, 18, 52, 58);
+      myOLED.drawRect(8, 18, 124, 58);
       myOLED.drawRect(10, 20, 50, 56);
+      myOLED.drawRect(50, 20, 122, 56);
     } else {
-      myOLED.drawRect(8, 18, 37, 58);
+      myOLED.drawRect(8, 18, 124, 58);
       myOLED.drawRect(10, 20, 35, 56);
+      myOLED.drawRect(35, 20, 122, 56);
     }
     //myOLED.print("m/s", CENTER, 16);
     myOLED.update();
